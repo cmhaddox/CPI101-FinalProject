@@ -16,5 +16,40 @@
         <div class="header">
             <h1 id="header">COVID AR Information Module</h1>
         </div>
+                
+        <!-- ========================================================================================== -->
+        <!-- Fill in the content BELOW this line -->
+
+        <div id="nft-marker1-info" class="info-pane" >
+            <h1>Fill in some info about this location.</h1>
+        </div>
+        <div id="nft-marker2-info" class="info-pane">
+            <h1>Fill in some info about this location.</h1>
+        </div>
+        <div id="nft-marker3-info" class="info-pane">
+            <h1>Fill in some info about this location.</h1>
+        </div>
+
+        <!-- Fill in the content ABOVE this line -->
+        <!-- ========================================================================================== -->
+
+        <!-- A simple loader from the sample code-->
+        <div class="arjs-loader">
+            <div>Loading, please wait...</div>
+        </div>
+        <!-- HUD -->
+        <div class="hud normal" id="markerState">
+            Point the camera to a marker.
+        </div>
+        <!-- AR.js core -->
+        <a-scene embedded arjs="trackingMethod: best" vr-mode-ui="enabled: false" init-img-markers>
+            
+            <!-- For Marker-based Tracking (url is set by JS due to a bug) -->
+            <a-nft type="nft" url="x" id="nft-marker1" data-info-pane="nft-marker1-info" data-marker-name="Old Main"></a-nft>
+            <a-nft type="nft" url="x" id="nft-marker2" data-info-pane="nft-marker2-info" data-marker-name="Hayden Library"></a-nft>
+            <a-nft type="nft" url="x" id="nft-marker3" data-info-pane="nft-marker3-info" data-marker-name="ASU Gammage"></a-nft>
+            <a-entity camera rotation-reader></a-entity> 
+
+        </a-scene>
     </body>
 </html>
